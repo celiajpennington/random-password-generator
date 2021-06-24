@@ -1,3 +1,69 @@
+Random Password Generator Exercise
+
+# Objective
+Create a random password generator that runs the user through a series of options that will then producer a password based on user's choice.
+
+# Web Languages Used
+HTML
+CSS
+JavaScript
+
+
+# Visuals
+
+<img width="1440" alt="Generatepw" src="https://user-images.githubusercontent.com/17009795/123345155-151d3100-d51b-11eb-988a-e91989ef1bbe.png">
+
+User clicks on Generate password to start sequence
+
+<img width="1440" alt="howMany" src="https://user-images.githubusercontent.com/17009795/123345350-7d6c1280-d51b-11eb-9b10-6c122a1c4313.png">
+
+User is asked to declare desired password length
+ 
+ <img width="1440" alt="lowerCase" src="https://user-images.githubusercontent.com/17009795/123345420-9c6aa480-d51b-11eb-834b-5913c170089d.png">
+
+User is asked to declare if they want to include lowercase letters
+
+<img width="1440" alt="upperCase" src="https://user-images.githubusercontent.com/17009795/123345471-c2904480-d51b-11eb-8479-a102ae639e41.png">
+
+User is asked to declare if they want to include uppercase letters
+
+<img width="1440" alt="specialCha" src="https://user-images.githubusercontent.com/17009795/123345546-eb183e80-d51b-11eb-8069-e7b1a32b27db.png">
+
+User is asked to declare if they would like to include special characters
+
+<img width="1440" alt="numbers" src="https://user-images.githubusercontent.com/17009795/123345586-071be000-d51c-11eb-9770-c0b4fd4f80be.png">
+
+User is asked to declare if they would like to include number
+
+<img width="1440" alt="RandompwGenerated" src="https://user-images.githubusercontent.com/17009795/123345636-24e94500-d51c-11eb-849c-b86b74b16d0a.png">
+
+Password is generated using users declared parameters 
+
+# Resources
+
+JavaScript Password Generator Tutorial
+
+https://youtu.be/duNmhKgtcsI
+
+Psuedo Code Examples
+https://introwebapps.wordpress.com/2018/10/16/pseudo-code/
+
+<img width="1440" alt="Psuedo Code Example" src="https://user-images.githubusercontent.com/17009795/123345857-9f19c980-d51c-11eb-94e6-eaccfad3c4d8.png">
+
+
+Credits
+Will Hoback
+Robby Kurl
+Leah Daniels-Nelson
+Chris Galis
+
+
+
+
+
+# Original Instructions
+
+
 # random-password-generator
 pplication that enables employees to generate random passwords based on criteria that they’ve selected
 # 03 JavaScript: Password Generator
