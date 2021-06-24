@@ -1,3 +1,24 @@
+Random Password Generator Exercise
+
+# Objective
+Create a random password generator that runs the user through a series of options that will then producer a password based on user's choice.
+
+# Web Languages Used
+HTML
+CSS
+JavaScript
+
+
+# Visuals
+
+
+
+
+
+
+
+
+# Original Instructions
 # random-password-generator
 pplication that enables employees to generate random passwords based on criteria that they’ve selected
 # 03 JavaScript: Password Generator
