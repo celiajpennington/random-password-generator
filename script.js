@@ -6,61 +6,81 @@
 
 
 
-
+//Using DOM to grab specific element
 var generateBtn = document.querySelector("#generate");
 
 
-
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
-var numericalChar = "0123456789";
-var specialChar = "!#$%&'()*+-./:;<=>?@[\^_`{|}~";
-
-function generatePassword() {
-  var password = "";
-  var passwordChar = "";
+//declaring var
+var lowercaseChar = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];;
+var uppercaseChar = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
+var numericalChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var specialChar =  [  '@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
+//creating first function of the pw generator
+function userInput() {
+  
 // creates user prompt to select password length
 var passwordLengthUser = prompt("How many characters would you like your password to be?");
 passwordLengthUser = parseInt(passwordLengthUser);
+//if password is too short prompt
 if (passwordLengthUser < 8) {
 alert("Password must have at least 8 characters!");
 return "";
 }
+//if password is too long prompt
 if (passwordLengthUser > 128) {
 alert("Password much not have more than 128 characters!");
 return ""
 }
 // creates confirm boolean for lowercase "yes or no"
 var lowercaseCharactersChoice = confirm("Would you like lowercase letters?");
-if (lowercaseCharactersChoice) {
-passwordChar += lowercaseChar;
-}
+
 // creates confirm boolean for uppercase "yes or no"
 var uppercaseCharactersChoice = confirm("Would you like uppercase letters?");
-if (uppercaseCharactersChoice) {
-passwordChar += uppercaseChar;
-}
+
 // creates confirm boolean for lowercase "yes or no"
 var numericalCharactersChoice = confirm("Would you like to add numbers?");
-if (numericalCharactersChoice) {
-passwordChar += numericalChar;
-}
+
+
 // creates confirm boolean for special characters "yes or no"
 var specialCharacterChoice = confirm("Would you like to add special characters?");
-if (specialCharacterChoice) {
-passwordChar += specialChar;
+var inputValues = {
+// key value: actual user input
+  inputlength: passwordLengthUser,
+  lowCho: lowercaseCharactersChoice,
+  upCho: uppercaseCharactersChoice,
+  numCho: numericalCharactersChoice,
+  specCho: specialCharacterChoice
+   
 }
-for (var i = 0; i < passwordLengthUser; i++) {
-password = passwordChar[Math.floor(Math.random() * passwordChar.length)]
+console.log(inputValues);
+//making userinput value ava outside of the userinput function
+return inputValues;
 }
 
-function writePassword(password){
-var password = generatePassword();
-var pwTextArea = document.getElementById("password");
-pwTextArea.value = password;
-return ("")
+function pwRando(arr) {
+
+  var randoValue = arr[Math.floor(Math.random() * arr.length)]
+  return randoValue;
+}
+function generatePassword() {
+var password = "";
+var passwordChar = "";
+//for (var i = 0; i < passwordLengthUser ; i++) {
+  
+
+
 
 }
 console.log(writePassword)
-}
-generateBtn.addEventListener("click", generatePassword);
+//}
+//Moved this outside of the generatePassword function
+function writePassword(password){
+  //
+  var password = userInput();
+
+  var pwTextArea = document.getElementById("password");
+  pwTextArea.value = password;
+ // return""
+  
+  }
+  generateBtn.addEventListener("click", writePassword);
